@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/style/style.css" />
   </head>
 
@@ -17,33 +18,38 @@
     <!-- bloc parent -->
     <div class="row border border-danger border-2 m-0">
       <!-- bloc gauche -->
-        <div class="col-3 border border-danger border-2 bg-secondary p-4 vh-100"> 
+        <div class="col-3 border border-danger border-2 bg-secondary p-4 "> 
         <div class="mb-3 border row">
-          <label for="titre">Titre</label>
+          <label for="titre" class="fw-bold">Titre</label>
           <input placeholder="Leave a comment here" id="titre" />
         </div>
         <div class="border row">
-          <label for="commentaires">Commentaires</label>
+          <label for="commentaires" class="fw-bold">Commentaires</label>
           <textarea
             placeholder="Vacances"
             id="commentaires"
             rows="10"
           ></textarea>
           <div class="row justify-content-evenly">
-          <button type="button" class="btn btn-success col-4">Valider</button>
-          <button type="button" class="btn btn-danger col-4">Effacer</button>
+          <button id="boutonValider" type="button" class="btn btn-success col-4">Valider</button>
+          <button id="boutonEffacer" type="button" class="btn btn-danger col-4">Effacer</button>
 
           </div>
         </div>
       </div>
 
       <!-- bloc droite -->
-      <div class="col-9 border border-dark border-3 vh-100 bg-light row justify-content-evenly p-4">
-        <textarea class="col-3">This is a sticky note you can type and edit.</textarea>
-        <textarea class="col-3">This is a sticky note you can type and edit.</textarea>
-        <textarea class="col-3">This is a sticky note you can type and edit.</textarea>
-        <textarea class="col-3">This is a sticky note you can type and edit.</textarea>
-     
+      <div id="tableau" class="col-9 border border-dark border-3 min-vh-100 bg-light row justify-content-evenly p-4">
+        <div class="col-3 textarea m-3">
+          <div class="text-end">
+            <i class="bi bi-x" onclick="supprimer(this)"></i>
+          </div>
+          <p class="h3 text-center">courses </p>
+          <p class="text-center">coca, pizza</p>
+        </div>
+   
+
+        
       </div>
     </div>
 
